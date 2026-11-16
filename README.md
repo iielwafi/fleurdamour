@@ -32,3 +32,7 @@ Or serve the project root with any static HTTP server.
 - The quote form copies a formatted request to the customer's clipboard; it does not send or store the request on a server.
 - Add a verified business email or WhatsApp integration before inviting customers to order.
 - Configure and test the live Netlify deployment before publishing it.
+
+## Secure admin + shared database
+
+The secure management area uses Supabase Auth + Postgres with row-level security. Follow [`SUPABASE_SETUP.md`](SUPABASE_SETUP.md) and run [`supabase/migrations/202611160001_secure_store.sql`](supabase/migrations/202611160001_secure_store.sql) before using `/admin.html`. Until the project URL/key are configured and an administrator account is provisioned, the admin page stays locked. Never add a Supabase `service_role` key to browser code.
