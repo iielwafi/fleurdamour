@@ -1,0 +1,23 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/node:22.0
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run:
+          name: Install project dependencies
+          command: npm install
+      - run:
+          name: Install Chromium for Playwright
+          command: npx playwright install --with-deps chromium
+      - run:
+          name: Run browser tests
+          command: npm test
+
+workflows:
+  fleurdamour_quality:
+    jobs:
+      - test

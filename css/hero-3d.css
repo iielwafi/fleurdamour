@@ -1,0 +1,65 @@
+
+/* Luxury 3D bouquet hero */
+:root{--gold:#b99663;--deep-rose:#a85e69;--wine:#53343b}
+.header{height:88px;background:rgba(248,241,235,.84);backdrop-filter:blur(18px);border-bottom:1px solid rgba(185,150,99,.22)}
+.brand{font-size:23px;letter-spacing:-.5px}.brand span{filter:drop-shadow(0 3px 5px #b8757c44)}
+.hero{min-height:720px;height:calc(100svh - 88px);max-height:920px;padding:5vh 7% 65px;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:2vw;background:radial-gradient(ellipse at 78% 44%,#f1ddd9 0,transparent 40%),linear-gradient(115deg,#fbf7f2 0%,#f8f0e9 55%,#f3e5df 100%)}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#a88978 0.55px,transparent .55px);background-size:7px 7px;mask-image:linear-gradient(90deg,transparent 25%,#000 100%)}
+.hero-copy{position:relative;z-index:1;max-width:600px;padding-bottom:3vh}
+.hero .eyebrow{color:#a17a50;letter-spacing:3px}
+.hero h1{font-size:clamp(58px,6.2vw,94px);line-height:.99;letter-spacing:-4.5px;margin:25px 0 27px}
+.hero h1 em{background:linear-gradient(110deg,#a85e69,#cf9291 55%,#a85e69);background-clip:text;-webkit-background-clip:text;color:transparent}
+.intro{font-size:14px;max-width:410px;line-height:2;color:#796b68}
+.button{background:linear-gradient(120deg,#382b2d,#604044);box-shadow:0 12px 25px #50383b25;border:1px solid #8e6b5e22;transition:transform .3s,box-shadow .3s}
+.button:hover{transform:translateY(-3px);box-shadow:0 17px 30px #50383b35}
+.note{border-left:1px solid var(--gold);padding-left:14px;margin-top:42px}
+.hero-art{min-height:570px;position:relative;isolation:isolate;background:radial-gradient(ellipse at 52% 58%,#e7c9c5 0,rgba(239,220,214,.72) 34%,transparent 69%);perspective:1100px}
+#halftone{display:none}
+.scene-glow{position:absolute;width:72%;height:74%;left:14%;top:13%;border-radius:50%;background:radial-gradient(ellipse,#fff8efb8 0%,#dfb9b35c 48%,transparent 72%);filter:blur(18px)}
+.scene-orbit{position:absolute;left:50%;top:49%;width:78%;height:67%;border:1px solid #b996634c;border-radius:50%;transform:translate(-50%,-50%) rotate(-22deg);pointer-events:none}
+.orbit-two{width:88%;height:76%;transform:translate(-50%,-50%) rotate(35deg);border-color:#b8757c35}
+.bouquet-scene{--tilt-x:0deg;--tilt-y:0deg;position:absolute;inset:4% 3% 0;transform-style:preserve-3d;transform:rotateX(var(--tilt-x)) rotateY(var(--tilt-y));transition:transform .22s ease-out;animation:bouquetFloat 7s ease-in-out infinite}
+.flower{position:absolute;bottom:31%;left:50%;width:5px;height:55%;transform-origin:bottom center;transform-style:preserve-3d}
+.flower-one{transform:translateX(-50%) rotate(-24deg);height:61%;z-index:4}
+.flower-two{transform:translateX(-50%) rotate(18deg) translateZ(24px);height:58%;z-index:5}
+.flower-three{transform:translateX(-50%) rotate(-5deg) translateZ(42px);height:69%;z-index:6}
+.flower-four{transform:translateX(-50%) rotate(35deg) translateZ(-18px);height:48%;z-index:3}
+.stem{position:absolute;bottom:0;left:-2px;width:4px;height:88%;border-radius:100%;background:linear-gradient(90deg,#52674d,#a5a77b 45%,#42563e);transform:rotate(2deg);transform-origin:bottom;box-shadow:2px 0 3px #34412d25}
+.leaf{position:absolute;bottom:36%;width:55px;height:24px;background:linear-gradient(145deg,#a8a77a,#596e50 70%);border-radius:100% 0 100% 0;box-shadow:inset 2px 2px 5px #ffffff55,0 3px 7px #38452d25;transform-origin:0 100%}
+.leaf:after{content:"";position:absolute;width:80%;height:1px;left:8%;top:52%;background:#d3c99b88;transform:rotate(-13deg)}
+.leaf-left{left:0;transform:rotate(-35deg)}.leaf-right{left:0;transform:rotate(145deg) scale(.82)}
+.flower-head{position:absolute;left:50%;top:0;width:105px;height:105px;transform:translate(-50%,-48%) translateZ(25px);transform-style:preserve-3d;filter:drop-shadow(0 12px 10px #68404735)}
+.flower-head i{position:absolute;left:50%;top:50%;width:38px;height:58px;margin:-49px 0 0 -19px;border-radius:78% 78% 48% 48%;transform-origin:50% 84%;background:linear-gradient(110deg,#8f4658 0%,#d98c9b 28%,#f4c4c3 48%,#b96579 76%,#7e4050 100%);box-shadow:inset 5px 2px 8px #fff7e77a,inset -5px -5px 9px #773c4d55,0 3px 7px #733d4b3b}
+.flower-head i:nth-child(1){transform:rotate(0deg) translateY(-10px) translateZ(3px)}
+.flower-head i:nth-child(2){transform:rotate(60deg) translateY(-10px) translateZ(5px)}
+.flower-head i:nth-child(3){transform:rotate(120deg) translateY(-10px) translateZ(7px)}
+.flower-head i:nth-child(4){transform:rotate(180deg) translateY(-10px) translateZ(9px)}
+.flower-head i:nth-child(5){transform:rotate(240deg) translateY(-10px) translateZ(7px)}
+.flower-head i:nth-child(6){transform:rotate(300deg) translateY(-10px) translateZ(5px)}
+.flower-head b{position:absolute;left:50%;top:50%;width:29px;height:29px;margin:-14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff0c2,#c99a51 45%,#81542e 78%);box-shadow:0 2px 8px #6d463b77,inset 0 2px 3px #fff8d4}
+.flower-two .flower-head{transform:translate(-50%,-48%) scale(.82) rotate(18deg)}
+.flower-two .flower-head i{background:linear-gradient(110deg,#b37b54,#f3d7a9 35%,#fff0cf 52%,#c18b5d 80%)}
+.flower-three .flower-head{transform:translate(-50%,-48%) scale(1.08) rotate(-12deg)}
+.flower-three .flower-head i{background:linear-gradient(110deg,#9e647e,#d7a1b5 32%,#f5d9df 52%,#ad6a87 82%)}
+.flower-four .flower-head{transform:translate(-50%,-48%) scale(.7) rotate(22deg)}
+.flower-four .flower-head i{background:linear-gradient(110deg,#a34f61,#e4a1a4 35%,#f7d1c8 55%,#a95163 82%)}
+.bouquet-wrap{position:absolute;left:50%;bottom:23%;width:220px;height:105px;transform:translateX(-50%) rotate(-8deg) translateZ(40px);border-radius:48% 48% 28% 28%;background:linear-gradient(105deg,#a67a54,#ead5b4 26%,#f6e9d5 48%,#bd956d 70%,#77523f);clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);box-shadow:inset 0 8px 16px #fff8e4aa,0 16px 24px #65453b35}
+.bouquet-wrap:before{content:"";position:absolute;inset:9px 15px 0;border-top:1px solid #fff8e2;border-bottom:1px solid #8e644a66;background:repeating-linear-gradient(95deg,transparent 0 17px,#fff8e255 18px 20px)}
+.vase{position:absolute;left:50%;bottom:2%;width:190px;height:170px;transform:translateX(-50%) translateZ(5px);clip-path:polygon(14% 0,86% 0,78% 100%,22% 100%);border-radius:15px 15px 45px 45px;background:linear-gradient(90deg,#9c6d61 0%,#e8c9b9 19%,#fff0df 39%,#d6a99b 65%,#8c5d58 100%);box-shadow:inset 10px 0 18px #fff8e6a8,inset -12px 0 20px #754d4b66,0 22px 28px #5b3a3730;display:grid;place-items:center}
+.vase:before{content:"";position:absolute;top:0;left:8%;width:84%;height:13px;border-radius:50%;background:linear-gradient(#fff3e4,#b98578)}
+.vase span{font:600 9px/1.6 var(--sans);letter-spacing:2px;color:#8c5d4d;text-align:center;text-shadow:0 1px #fff7e5}
+.floating-spark{position:absolute;color:#b99663;text-shadow:0 0 14px #c49b6b88;animation:sparkle 4s ease-in-out infinite}
+.spark-one{top:19%;left:21%;font-size:24px}.spark-two{top:42%;right:13%;font-size:30px;animation-delay:1.2s}.spark-three{bottom:26%;left:18%;font-size:17px;animation-delay:2.1s}
+.stamp{z-index:4;top:7%;right:4%;border-color:#b9966380;color:#a17a50;background:#fbf4eb66;backdrop-filter:blur(5px)}
+.art-caption{z-index:4;bottom:6%;right:3%;color:#9a7d70}
+.hero-foot{letter-spacing:2px;color:#a58e7c}
+@keyframes bouquetFloat{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes sparkle{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(25deg)}}
+.section h2,.story h2,.contact h2{letter-spacing:-2.5px}
+.product-visual{overflow:hidden;box-shadow:0 18px 40px #60444712;transition:transform .5s,box-shadow .5s}
+.product-visual:hover{transform:translateY(-8px);box-shadow:0 25px 50px #60444720}
+.product-visual span{font-size:130px;filter:drop-shadow(0 14px 12px #50323825)}
+@media(max-width:900px){.hero{grid-template-columns:1fr 1fr;padding-left:5%;padding-right:5%;gap:0}.hero h1{font-size:clamp(50px,7vw,72px)}.hero-art{min-height:480px}.bouquet-scene{inset:5% -5% 0}.vase{width:160px;height:145px}.bouquet-wrap{width:185px}}
+@media(max-width:700px){.hero{height:auto;min-height:0;padding:54px 6% 35px;grid-template-columns:1fr;gap:0}.hero h1{font-size:clamp(54px,12vw,78px);letter-spacing:-3px}.hero-copy{padding:0}.hero-art{min-height:470px;margin-top:10px}.bouquet-scene{inset:0 0 0}.hero-foot{display:none}.note{margin-top:28px}.stamp{right:2%;top:3%}.art-caption{bottom:3%;right:4%}}
+@media(max-width:420px){.hero-art{min-height:400px}.flower-head{scale:.82}.vase{width:145px;height:130px}.bouquet-wrap{width:165px;height:85px}}
+@media(prefers-reduced-motion:reduce){.bouquet-scene,.floating-spark{animation:none!important}.button,.product-visual{transition:none!important}}
