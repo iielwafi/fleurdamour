@@ -2,7 +2,7 @@
 create table if not exists public.notification_recipients (
   id uuid primary key default gen_random_uuid(),
   label text not null check (char_length(label) between 2 and 60),
-  phone text not null unique check (phone ~ '^\\+[1-9][0-9]{7,14}$'),
+  phone text not null unique check (phone ~ '^[+][1-9][0-9]{7,14}$'),
   enabled boolean not null default true,
   created_at timestamptz not null default now()
 );
