@@ -80,3 +80,75 @@ tbody tr:hover td{background:#fff8f4}
 @media(max-width:700px){.sidebar{width:auto;padding:14px 14px 12px}.admin-main{margin:0;padding:20px 14px 42px}.admin-brand{min-height:45px;padding:0 0 12px!important}.admin-brand:after{display:none}.brand-mark{width:37px;height:37px;flex-basis:37px}.brand-mark svg{width:28px;height:28px}.brand-wordmark b,.brand-wordmark i{font-size:18px}.brand-wordmark small{margin-top:4px}.sidebar-caption{display:none}.side-nav{flex-direction:row;gap:5px;padding:8px 0 0;overflow-x:auto}.side-nav a{min-height:40px;padding:6px 9px!important;gap:7px!important;font-size:10px;white-space:nowrap}.side-nav a .nav-icon{width:27px;height:27px;flex-basis:27px}.sidebar-bottom{display:none}.topbar{align-items:flex-start;flex-direction:column}.top-actions{justify-content:flex-start}.welcome-row{align-items:flex-start;flex-direction:column;padding:20px}.welcome-row:after{right:0}.welcome-row h2{font-size:29px}.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric-card{min-height:120px;padding:15px}.metric-card strong{font-size:26px}.panel{padding:17px}.section-intro{padding:20px}.section-intro:after{right:-12px}}
 @media(max-width:420px){.metric-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Compact analytics layout inspired by the supplied dashboard reference */
+.atelier-dashboard{display:block!important}
+.dashboard-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:0 0 18px;padding:0 0 15px;border-bottom:1px solid #e5d8d0}
+.dashboard-heading h2{font:600 29px/1.1 var(--sans);letter-spacing:-1px;margin:5px 0 4px;color:#35272b}
+.dashboard-heading>div>p:last-child{font-size:11px;color:#8e7e78;margin:0}
+.dashboard-heading-actions{display:flex;align-items:center;gap:12px}
+.dashboard-period{font-size:9px;color:#72876c;background:#edf2e9;border:1px solid #e1e9dc;padding:8px 11px;border-radius:30px;white-space:nowrap}
+.dashboard-kpis{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.dashboard-kpis .metric-card{min-height:112px;padding:14px 15px;border:1px solid #dfd1c7;border-radius:11px;background:linear-gradient(145deg,#fffdf9,#f8f0e8);box-shadow:0 3px 10px #4c36300a}
+.dashboard-kpis .metric-card:before{display:none}
+.dashboard-kpis .metric-card:hover{transform:translateY(-2px);box-shadow:0 7px 17px #4c363012}
+.kpi-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.kpi-top>span{font:700 9px var(--sans);letter-spacing:.25px;color:#55474a}
+.kpi-top>i{font-style:normal;display:grid;place-items:center;width:22px;height:22px;border-radius:7px;background:#f0e3df;color:#98646b;font-size:13px}
+.dashboard-kpis .metric-card strong{font:700 25px var(--sans);letter-spacing:-.8px;margin:8px 0 2px;color:#38282c}
+.dashboard-kpis .metric-card small{font-size:9px;color:#877873}
+.kpi-spark{position:absolute;right:13px;bottom:13px;width:66px;height:25px;opacity:.75}
+.kpi-spark svg{width:100%;height:100%;overflow:visible}
+.kpi-spark path{fill:none;stroke:#a97078;stroke-width:2.5;stroke-linecap:round}
+.kpi-ring{position:absolute;right:16px;bottom:13px;width:36px;height:36px;border-radius:50%;border:5px solid #e8c9c2;display:grid;place-items:center}
+.kpi-ring span{font-size:8px;color:#8b686a}
+.kpi-bars{position:absolute;right:15px;bottom:13px;height:30px;display:flex;align-items:end;gap:4px}
+.kpi-bars i{display:block;width:5px;border-radius:3px 3px 0 0;background:#c58e8c}
+.kpi-bars i:nth-child(1){height:11px}.kpi-bars i:nth-child(2){height:20px}.kpi-bars i:nth-child(3){height:15px}.kpi-bars i:nth-child(4){height:25px}.kpi-bars i:nth-child(5){height:18px}
+.dashboard-grid{display:grid;gap:12px;margin-bottom:12px}
+.dashboard-middle{grid-template-columns:minmax(0,2fr) minmax(250px,.95fr)}
+.dashboard-bottom{grid-template-columns:1.1fr 1fr 1fr}
+.dashboard-panel{margin:0;padding:16px 17px;border:1px solid #dfd1c7;border-radius:11px;background:linear-gradient(145deg,#fffdf9,#fbf5ed);box-shadow:0 3px 10px #4c36300a;min-width:0}
+.dash-panel-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.dash-panel-heading .eyebrow{margin:0 0 5px;font-size:8px;letter-spacing:1.25px}
+.dash-panel-heading h3{font:700 14px var(--sans);letter-spacing:-.25px;margin:0 0 4px;color:#3b2d30}
+.dash-panel-heading small{font-size:9px;color:#968680}
+.dash-panel-heading .period-select{font-size:9px;white-space:nowrap}
+.dash-panel-heading .period-select select{font-size:9px;padding:5px 7px;background:#f2e9e2;border-radius:6px}
+.panel-icon{width:25px;height:25px;display:grid;place-items:center;border-radius:8px;background:#f2e5df;color:#a56d75}
+.revenue-panel{min-height:250px}
+.revenue-panel .chart-legend{margin:15px 0 2px;font-size:9px}
+.revenue-panel .chart-legend>b{font:700 16px var(--sans)}
+.revenue-panel #sales-chart{height:165px}
+.revenue-panel .chart-empty{font:italic 10px var(--sans);padding:0 0 8px}
+.donut-wrap{position:relative;width:170px;height:145px;margin:3px auto 0;display:grid;place-items:center}
+#orders-donut{width:145px;height:145px}
+.donut-center{position:absolute;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.donut-center strong{font:700 23px var(--sans);color:#38282c}
+.donut-center small{font-size:8px;color:#8c7d77}
+.donut-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 10px;margin-top:2px}
+.donut-legend>div{display:flex;align-items:center;gap:6px;font-size:8px;color:#786963;min-width:0}
+.donut-legend i{width:7px;height:7px;flex:0 0 7px;border-radius:50%}
+.donut-legend b{margin-left:auto;font-size:8px;color:#49383b}
+.empty-mini{font-size:9px;color:#9a8a83;text-align:center;padding:13px 5px;margin:0}
+.activity-list{display:grid;gap:0;margin-top:8px}
+.activity-item{display:grid;grid-template-columns:26px minmax(0,1fr) auto;align-items:center;gap:8px;padding:8px 0;border-top:1px solid #eee5de}
+.activity-symbol{width:25px;height:25px;display:grid;place-items:center;border-radius:8px;background:#f1e4df;color:#a36d75;font-size:12px}
+.activity-copy{min-width:0}
+.activity-copy b{display:block;font-size:9px;color:#49383b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.activity-copy small{display:block;margin-top:3px;font-size:8px;color:#988780;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.activity-time{font-size:8px;color:#9a8b84;white-space:nowrap}
+.pipeline-list{display:grid;gap:10px;margin-top:16px}
+.pipeline-row{display:grid;grid-template-columns:82px minmax(0,1fr) 22px;align-items:center;gap:8px;font-size:8px;color:#776761}
+.pipeline-track{height:7px;background:#f0e6df;border-radius:10px;overflow:hidden}
+.pipeline-track i{display:block;height:100%;border-radius:10px;background:linear-gradient(90deg,#bd7b82,#d6a49a)}
+.pipeline-row b{text-align:right;font-size:8px;color:#554448}
+.top-products-list{display:grid;gap:0;margin-top:8px}
+.top-product{display:grid;grid-template-columns:minmax(0,1fr) 36px 54px;align-items:center;gap:8px;padding:9px 0;border-top:1px solid #eee5de;font-size:9px}
+.top-product-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#514144}
+.top-product-count{text-align:right;color:#7c6b66;font-size:8px}
+.top-product-bar{height:4px;border-radius:8px;background:#efe4de;overflow:hidden}
+.top-product-bar i{display:block;height:100%;background:#b77a80;border-radius:8px}
+.dashboard-panel .text-button{font-size:8px;white-space:nowrap}
+@media(max-width:1100px){.dashboard-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-bottom{grid-template-columns:repeat(2,minmax(0,1fr))}.top-products-panel{grid-column:1/-1}}
+@media(max-width:760px){.dashboard-heading{align-items:flex-start;flex-direction:column}.dashboard-heading-actions{width:100%;justify-content:space-between}.dashboard-heading h2{font-size:25px}.dashboard-middle,.dashboard-bottom{grid-template-columns:1fr}.top-products-panel{grid-column:auto}.dashboard-kpis .metric-card{min-height:105px;padding:12px}.dashboard-kpis .metric-card strong{font-size:22px}.dashboard-panel{padding:14px}.revenue-panel #sales-chart{height:150px}}
