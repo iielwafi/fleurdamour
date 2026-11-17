@@ -228,3 +228,35 @@ td{padding:17px 16px}
  .offer-grid{grid-template-columns:1fr}
 }
 @media(max-width:420px){.metric-grid{grid-template-columns:1fr}.topbar h1{font-size:29px}}
+
+
+/* Sidebar identity system — Atelier icon set */
+.admin-brand{color:#f8eee9!important;text-decoration:none!important;align-items:center;gap:12px;padding:0 7px 45px}
+.admin-brand:hover,.admin-brand:visited{color:#f8eee9}
+.brand-mark{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#61464b,#3e3035);border:1px solid #ffffff16;box-shadow:0 7px 18px #130d0e35}
+.brand-mark svg{width:31px;height:31px;fill:#d99da2;stroke:#f1c9c5;stroke-width:.6}
+.brand-mark circle{fill:#f8e5d8;stroke:none}
+.brand-wordmark{display:flex;flex-direction:column;gap:0;line-height:1.04}
+.brand-wordmark b,.brand-wordmark i{font:600 21px/1.05 var(--serif);letter-spacing:-.5px;color:#f8eee9}
+.brand-wordmark i{font-style:italic;color:#d9a0a3;margin-top:2px}
+.brand-wordmark small{font:600 7px/1 var(--sans);letter-spacing:2px;color:#bfa7a0;margin-top:8px}
+.side-nav a{gap:12px;text-decoration:none!important;color:#dfd0cb!important}
+.side-nav a:visited{color:#dfd0cb}
+.side-nav a .nav-icon{width:31px;height:31px;flex:0 0 31px;display:grid;place-items:center;border-radius:9px;background:#ffffff08;color:#d49a9e;transition:background .2s,color .2s,transform .2s}
+.side-nav a .nav-icon svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.side-nav a.active .nav-icon{background:#d99da21f;color:#f0b8b8;transform:scale(1.04)}
+.side-nav a:hover .nav-icon{background:#d99da21c;color:#f0b8b8}
+.side-nav a{font-size:11px;font-weight:600;letter-spacing:.1px}
+.side-nav a small{font-size:9px;font-weight:700;padding:3px 7px;border-radius:20px;background:#ffffff12;color:#e7b8b7}
+.side-label{font-size:8px;letter-spacing:2.2px}
+.sidebar-bottom{gap:11px;padding:19px 7px 0}
+.side-avatar{width:38px;height:38px;border:2px solid #ffffff28;font:600 12px var(--sans)}
+.sidebar-bottom b{font-size:10px;letter-spacing:.1px}
+.sidebar-bottom small{font-size:9px}
+@media(max-width:760px){
+ .admin-brand{padding:0 0 15px}
+ .brand-mark{width:36px;height:36px;flex-basis:36px}
+ .brand-mark svg{width:27px;height:27px}
+ .brand-wordmark b,.brand-wordmark i{font-size:18px}
+ .side-nav a .nav-icon{width:27px;height:27px;flex-basis:27px}
+}
