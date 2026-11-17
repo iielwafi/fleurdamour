@@ -16,7 +16,7 @@ declare
   v_total numeric(10,2);
 begin
   if new.status = 'completed'
-     and (tg_op = 'INSERT' or old.status is distinct from 'completed') then
+     and (tg_op = 'INSERT' or (tg_op = 'UPDATE' and old.status is distinct from 'completed')) then
     -- Prices are captured in each order item at checkout. If any item was
     -- "price on request", do not invent a revenue amount.
     if jsonb_typeof(new.items) = 'array'
