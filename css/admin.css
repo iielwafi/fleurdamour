@@ -260,3 +260,56 @@ td{padding:17px 16px}
  .brand-wordmark b,.brand-wordmark i{font-size:18px}
  .side-nav a .nav-icon{width:27px;height:27px;flex-basis:27px}
 }
+
+
+/* Atelier Signature Sidebar — v4 */
+.sidebar{
+ width:252px;padding:30px 18px 22px;
+ background:
+  radial-gradient(ellipse at 8% 5%,#9b66651c 0,transparent 34%),
+  linear-gradient(165deg,#302326 0%,#291f22 52%,#21191c 100%);
+ border-right:1px solid #ffffff12;
+ box-shadow:12px 0 36px #24191b12;
+}
+.admin-main{margin-left:252px}
+.admin-brand{position:relative;display:flex;min-height:70px;padding:0 8px 36px!important;gap:13px!important}
+.admin-brand:after{content:"";position:absolute;left:8px;right:8px;bottom:17px;height:1px;background:linear-gradient(90deg,#d7a0a355, #ffffff0c 72%,transparent)}
+.brand-mark{width:46px;height:46px;flex-basis:46px;border-radius:15px;background:linear-gradient(145deg,#76545a,#47363b);box-shadow:inset 0 1px #ffffff24,0 8px 20px #100b0d45}
+.brand-mark svg{width:34px;height:34px;filter:drop-shadow(0 2px 2px #20141755)}
+.brand-wordmark b,.brand-wordmark i{font-size:22px;letter-spacing:-.7px}
+.brand-wordmark small{font-size:6.5px;letter-spacing:2.35px;margin-top:7px}
+.sidebar-caption{display:flex;align-items:center;gap:10px;margin:4px 8px 17px}
+.sidebar-caption .side-label{margin:0;color:#b99f9a;font-size:8px;letter-spacing:2px;white-space:nowrap}
+.caption-line{height:1px;flex:1;background:linear-gradient(90deg,#ffffff24,transparent)}
+.side-nav{display:flex;flex-direction:column;gap:6px}
+.side-nav a{display:flex;align-items:center;min-height:49px;padding:8px 10px!important;border-radius:11px!important;gap:11px!important;color:#e6d8d3!important;font-size:11px;font-weight:600;letter-spacing:.15px;text-decoration:none!important}
+.side-nav a .nav-icon{width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:#ffffff08;color:#d8a1a3}
+.side-nav a .nav-icon svg{width:18px;height:18px;stroke-width:1.55}
+.side-nav a.active{background:linear-gradient(105deg,#ffffff19,#ffffff08)!important;border-color:#ffffff18!important;box-shadow:inset 3px 0 #dba1a5,0 5px 16px #120c0e17}
+.side-nav a.active .nav-icon{background:linear-gradient(145deg,#e0a9aa33,#d69b9e16);color:#f1c5c1}
+.side-nav a:hover:not(.active){background:#ffffff0b!important;border-color:#ffffff0a!important}
+.side-nav a:hover .nav-icon{transform:translateY(-1px);background:#d99da21c;color:#f1c5c1}
+.side-nav a small{margin-left:auto;min-width:24px;text-align:center;padding:4px 7px;border:1px solid #ffffff12;background:#ffffff0d;color:#e7b8b7;font-size:9px}
+.sidebar-bottom{position:relative;display:flex;align-items:center;gap:11px;margin-top:auto;padding:18px 7px 3px!important;border-top:1px solid #ffffff1c}
+.side-avatar{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#e6b6b0,#c98f92);color:#38282b;font-size:13px;box-shadow:0 5px 14px #10090b38}
+.sidebar-identity{display:flex;flex-direction:column;gap:5px;min-width:0}
+.sidebar-bottom b{font-size:10px;color:#f5e9e4;white-space:nowrap}
+.sidebar-bottom small{font-size:9px;color:#b9a6a0}
+.sidebar-live{width:7px;height:7px;margin-left:auto;border-radius:50%;background:#91b58f;box-shadow:0 0 0 4px #91b58f19}
+@media(max-width:1050px){.sidebar{width:220px}.admin-main{margin-left:220px}}
+@media(max-width:760px){
+ .sidebar{width:auto;padding:14px 14px 12px}
+ .admin-main{margin:0}
+ .admin-brand{min-height:45px;padding:0 0 12px!important}
+ .admin-brand:after{display:none}
+ .brand-mark{width:37px;height:37px;flex-basis:37px;border-radius:12px}
+ .brand-mark svg{width:28px;height:28px}
+ .brand-wordmark b,.brand-wordmark i{font-size:18px}
+ .brand-wordmark small{margin-top:4px}
+ .sidebar-caption{display:none}
+ .side-nav{flex-direction:row;gap:5px;padding:8px 0 0}
+ .side-nav a{min-height:40px;padding:6px 9px!important;gap:7px!important;font-size:10px}
+ .side-nav a .nav-icon{width:27px;height:27px;flex-basis:27px}
+ .side-nav a .nav-icon svg{width:15px;height:15px}
+ .sidebar-bottom{display:none}
+}
